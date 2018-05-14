@@ -12,7 +12,7 @@ class FileMove:
 		result = {
 			'result': 'success'
 		}
-      		body = json.loads(req.bounded_stream.read())
+		body = json.loads(req.bounded_stream.read())
 		
 		srcPath = db.get_path(body['srcId'])
 		dirPath = db.get_path(body['dstId'])
@@ -24,7 +24,7 @@ class FileMove:
 			return
 		
 		try:
-        		os.rename(srcPath, dstPath)
+			os.rename(srcPath, dstPath)
 			db.update(srcId, dstPath)
 		except:
 			result['result'] = "failed"
@@ -103,8 +103,10 @@ class FileCopy:
 		
 		resp.media = result
 
+"""
 api = falcon.API()
 api.add_route('/api/file/move', FileMove())
 api.add_route('/api/file/delete', FileDelete())
 api.add_route('/api/file/create', FileCreate())
 api.add_route('/api/file/copy', FileCopy())
+"""

@@ -34,11 +34,11 @@ def get_path(id):
 	result = file_manager.find_one({'_id': id})
 	return json.dumps({'path': result['path']})
 
-def get_name(id)
+def get_name(id):
 	result = file_manager.find_one({'_id': id})
 	return json.dumps({'name': result['name']})
 
-def update(srcId, newPath)
+def update(srcId, newPath):
 	db.file_manager.update({'_id': id}, {'%set': {'path': newPath}})
 
 if __name__ == "__main__":
