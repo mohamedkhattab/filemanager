@@ -1,0 +1,18 @@
+$prim-color: #0073e5;
+$sec-color: #7ddc1f;
+$font-color: #000000;
+$font-color-light: #444444;
+$bg-color: #f5f5f5;
+$logo-font: 'Gugi', cursive;
+$text-font: 'Lora', serif;
+$title-font: 'Lato', sans-serif;
+
+@import "./components/navbar.scss";
+@import "./components/body.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $text-font;
+    background: $bg-color;
+}

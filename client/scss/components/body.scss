@@ -1,0 +1,95 @@
+
+div.body {
+    padding-left: 16.5vw;
+}
+
+h1.main-label {
+    font-size: 28pt;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 10pt;
+}
+
+div.library { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.file {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-right: 3vw;
+    
+    img.file,
+    img.dir {
+        margin-bottom: 10px;
+    }
+    
+    img.file {
+        width: 36pt;
+    }
+
+    img.dir {
+        width: 72pt;
+    }
+
+    span.name {
+        font-family: "Lato", sans-serif;
+    }
+}
+
+div.toolbar {
+    margin-bottom: 30pt;
+
+    img {
+        width: 22pt;
+        margin-right: 3vw;
+    }
+}
+
+div.modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+
+    form {
+        background-color: white;
+        padding: 20pt;
+        display: flex;
+        flex-direction: column;
+        height: 25vh;
+        margin-top: 14vh;
+    }
+
+    h3.title {
+        font-family: "Lato", sans-serif;
+        font-size: 23pt;
+    }
+
+    input.form-ctrl {
+        border: 1px solid #777777;
+        margin-bottom: 1.5vh;
+    }
+
+    button {
+        margin-top: 10pt;
+    }
+}
+
+a.cross {
+    img {
+        width: 12pt;
+        margin-left: 90%;
+    }
+}
+
+.no-display {
+    display: none;
+}

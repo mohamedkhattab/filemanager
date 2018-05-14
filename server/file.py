@@ -19,7 +19,7 @@ class FileMove:
 		fileName = body['fileName']
 		dstPath = os.path.join(dirPath, fileName)
 		
-		if(srcPath == -1 || dirPath == -1):
+		if(srcPath == -1 or dirPath == -1):
 			result['result'] = "failed"
 			return
 		
@@ -87,7 +87,7 @@ class FileCopy:
 		
 		srcPath = get_path(srcId)
 		dirPath = get_path(dirId)
-		if(srcPath == -1 || dirPath == -1):
+		if(srcPath == -1 or dirPath == -1):
 			result['result'] = "failed"
 			return
 		fileName = get_name(srcId)
