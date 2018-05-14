@@ -25,7 +25,7 @@ class FileMove:
 		
 		try:
         		os.rename(srcPath, dstPath)
-			db.update(srcPath, dstPath)
+			db.update(srcId, dstPath)
 		except:
 			result['result'] = "failed"
 		
