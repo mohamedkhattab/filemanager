@@ -4,6 +4,7 @@ import json
 import shutil
 import db
 import magic
+import pprint
 
 class FileMove:
 	def on_post(self, req, resp):
@@ -60,11 +61,17 @@ class FileCreate:
 		result = {
 			'result': 'success'
 		}
-		body = json.loads(req.bounded_stream.read())
+
+		# pprint.pprint(req.bounded_stream.read().decode("utf-8"))
+		body = json.loads(req.bounded_stream.read().decode("utf-8"))
+		dirPath = db.get_path(int(body['dirId'], 10))
+		# print("DEBUG: " + str(dirPath))
 		
-		dirPath = get_path(body['dirId'])
-		if(dirPath == -1):
+		if dirPath == -1:
 			result['result'] = "failed"
+			resp.media = result
+			return
+
 		srcPath = os.path.join(dirPath, body['srcName'])
 
 		try:

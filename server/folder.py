@@ -5,6 +5,7 @@ import shutil
 import db
 import magic
 import file
+from falcon_multipart.middleware import MultipartMiddleware
 
 class FolderMove:
 	def on_post(self, req, resp):
